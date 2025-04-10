@@ -288,28 +288,30 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 /* Mobile Navigation */
 @media only screen and (max-width: 600px) {
-  /* Hide desktop menu items on mobile */
-  .w3-hide-small {
-    display: none !important;
+  /* Mobile menu styles */
+  .w3-bar.w3-black.w3-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
   }
 
-  /* Mobile menu styles */
   .w3-bar.w3-black.w3-card .w3-button {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
+    padding: 8px 16px !important;
+    margin: 0 4px !important;
   }
 
   .w3-bar.w3-black.w3-card .w3-button i {
-    margin-right: 8px;
+    margin-right: 4px;
   }
 
   /* Mobile menu button */
   .w3-bar.w3-black.w3-card .w3-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px;
-    z-index: 1001;
+    position: static;
+    padding: 8px 12px;
+    margin-left: auto;
   }
 
   /* Mobile menu overlay */
@@ -366,64 +368,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   #main {
     margin-top: 60px;
   }
-
-  /* Experience Section */
-  .experience-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2em;
-  }
-
-  .experience-item .w3-circle {
-    margin-bottom: 15px !important;
-    width: 60px !important;
-  }
-
-  .experience-item .education-details {
-    width: 100% !important;
-    max-width: 90% !important;
-  }
-
-  .experience-item .w3-large {
-    font-size: 1.2em !important;
-  }
-
-  .date-text {
-    font-size: 0.9em !important;
-    margin: 0.5em 0 !important;
-    text-align: center !important;
-  }
-
-  /* Education Section */
-  .education-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2em;
-  }
-
-  .education-item .w3-circle {
-    margin-bottom: 15px !important;
-    width: 60px !important;
-  }
-
-  .education-item .education-details {
-    width: 100% !important;
-    max-width: 90% !important;
-  }
-
-  .education-item .w3-large {
-    font-size: 1.2em !important;
-  }
-
-  .major-text {
-    font-size: 0.9em !important;
-    margin: 0.5em 0 !important;
-    text-align: center !important;
-  }
 }
 </style>
 
@@ -432,14 +376,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
-    <a href="index.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-home"></i> HOME</a>
-    <a href="projects.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-th"></i> PROJECTS</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-envelope"></i> CONTACT</a>
-
     <!-- Desktop menu items -->
     <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
     <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+
+    <!-- Mobile menu items -->
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-home"></i> HOME</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-envelope"></i> CONTACT</a>
 
     <!-- Mobile menu button -->
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -514,58 +459,124 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <!-- Experience Section -->
-    <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
-    <div class="experience-item">
-      <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
-        <p class="date-text">JULY'22 – MAY'23</p>
+    <div class="w3-hide-small">
+      <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
+      <div class="experience-item">
+        <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
+          <p class="date-text">JULY'22 – MAY'23</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="experience-item">
+        <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
+          <p class="date-text">FEB'22 – JULY'22</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="experience-item">
+        <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
+          <p class="date-text">FEB'21 – APRIL'21</p>
+        </div>
       </div>
     </div>
-    <br>
 
-    <div class="experience-item">
-      <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
-        <p class="date-text">FEB'22 – JULY'22</p>
+    <!-- Mobile Experience Section -->
+    <div class="w3-hide-medium w3-hide-large">
+      <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
+      <div class="mobile-experience-item">
+        <img src="Samsung-Logo.png" alt="Samsung" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</p>
+          <p>ENGINEER</p>
+          <p class="mobile-date-text">JULY'22 – MAY'23</p>
+        </div>
       </div>
-    </div>
-    <br>
 
-    <div class="experience-item">
-      <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
-        <p class="date-text">FEB'21 – APRIL'21</p>
+      <div class="mobile-experience-item">
+        <img src="th.jpeg" alt="Publicis" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">PUBLICIS SAPIENT, BANGLORE</p>
+          <p>JAVA DEVELOPER</p>
+          <p class="mobile-date-text">FEB'22 – JULY'22</p>
+        </div>
+      </div>
+
+      <div class="mobile-experience-item">
+        <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">RETAIL RUSH by GMC, ANDRAPRADESH</p>
+          <p>WEB DEVELOPER</p>
+          <p class="mobile-date-text">FEB'21 – APRIL'21</p>
+        </div>
       </div>
     </div>
 
     <!-- Education Section -->
-    <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
-    <div class="education-item">
-      <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
-        <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
+    <div class="w3-hide-small">
+      <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
+      <div class="education-item">
+        <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
+          <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="education-item">
+        <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
+          <p class="major-text">Major: Information Technology | 7.41</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="education-item">
+        <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <div class="education-details">
+          <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
+          <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
+        </div>
       </div>
     </div>
-    <br>
 
-    <div class="education-item">
-      <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
-        <p class="major-text">Major: Information Technology | 7.41</p>
+    <!-- Mobile Education Section -->
+    <div class="w3-hide-medium w3-hide-large">
+      <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
+      <div class="mobile-education-item">
+        <img src="logo_Epita.png" alt="EPITA" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">EPITA, PARIS</p>
+          <p>MASTERS</p>
+          <p class="mobile-major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
+        </div>
       </div>
-    </div>
-    <br>
 
-    <div class="education-item">
-      <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <div class="education-details">
-        <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
-        <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
+      <div class="mobile-education-item">
+        <img src="bitlogo.png" alt="BIT" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</p>
+          <p>B.TECH</p>
+          <p class="mobile-major-text">Major: Information Technology | 7.41</p>
+        </div>
+      </div>
+
+      <div class="mobile-education-item">
+        <img src="dps.png" alt="DPS" class="w3-circle w3-margin-bottom" style="width:60px">
+        <div class="education-details">
+          <p class="w3-large">DELHI PRIVATE SCHOOL, SHARJAH</p>
+          <p>AISSCE- 12TH</p>
+          <p class="mobile-major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
+        </div>
       </div>
     </div>
   </div>
