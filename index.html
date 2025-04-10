@@ -128,8 +128,82 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-sidebar {width: 120px;background: #222;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .w3-jumbo {
+    font-size: 48px !important;
+  }
+
+  .w3-quarter {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .w3-row.w3-center.w3-padding-16.w3-section.w3-light-grey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px !important;
+  }
+
+  .w3-quarter.w3-section {
+    padding: 15px 0;
+  }
+
+  .education-item, .experience-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .w3-circle, .w3-rectangle {
+    margin: 0 0 15px 0 !important;
+    width: 60px !important;
+  }
+
+  .w3-large {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em !important;
+    text-align: center;
+  }
+
+  .date-text, .major-text {
+    text-align: center;
+    margin: 5px 0 !important;
+  }
+
+  .major-text {
+    margin-left: 0 !important;
+  }
+
+  .w3-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .w3-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 16px;
+  }
+
+  .education-details {
+    text-align: center;
+    width: 100%;
+  }
+
+  .w3-padding-64 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+}
 
 .skill-bar {
   width: 0;
