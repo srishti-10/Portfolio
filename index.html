@@ -237,33 +237,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   from, to { border-color: transparent }
   50% { border-color: #fff; }
 }
+.experience-item {
+  margin-bottom: 30px;
+}
+
+.experience-item img {
+  margin-bottom: 10px;
+}
+
+.experience-item .w3-large {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
 .education-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 2em;
+  align-items: flex-start;
+  margin-bottom: 1em;
 }
+
+.education-item img {
+  margin-bottom: 10px;
+}
+
 .education-details {
-  width: 100%;
-  max-width: 80%;
+  flex: 1;
 }
+
 .education-details p {
   margin: 0.5em 0;
 }
+
 .major-text {
+  margin-left: 95px !important;
   color: #888;
-  margin: 0.5em 0 !important;
-  text-align: center !important;
 }
-.w3-large {
-  color: #fff;
-  font-weight: 500;
-  margin: 0.5em 0 !important;
-  text-align: center !important;
-}
+
 @media only screen and (max-width: 600px) {
-  .education-item {
+  .experience-item {
     margin-bottom: 2em;
   }
 
@@ -486,33 +497,25 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <!-- Experience Section -->
-    <div class="w3-hide-small">
-      <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
-      <div class="experience-item">
-        <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
-          <p class="date-text">JULY'22 – MAY'23</p>
-        </div>
-      </div>
-      <br>
+    <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
+    <div class="experience-item">
+      <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
+      <p class="date-text">JULY'22 – MAY'23</p>
+    </div>
+    <br>
 
-      <div class="experience-item">
-        <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
-          <p class="date-text">FEB'22 – JULY'22</p>
-        </div>
-      </div>
-      <br>
+    <div class="experience-item">
+      <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
+      <p class="date-text">FEB'22 – JULY'22</p>
+    </div>
+    <br>
 
-      <div class="experience-item">
-        <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
-          <p class="date-text">FEB'21 – APRIL'21</p>
-        </div>
-      </div>
+    <div class="experience-item">
+      <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-rectangle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
+      <p class="date-text">FEB'21 – APRIL'21</p>
     </div>
 
     <!-- Mobile Experience Section -->
@@ -547,32 +550,30 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <!-- Education Section -->
-    <div class="w3-hide-small">
-      <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
-      <div class="education-item">
-        <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
-          <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
-        </div>
+    <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
+    <div class="education-item">
+      <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
+        <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
       </div>
-      <br>
+    </div>
+    <br>
 
-      <div class="education-item">
-        <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
-          <p class="major-text">Major: Information Technology | 7.41</p>
-        </div>
+    <div class="education-item">
+      <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
+        <p class="major-text">Major: Information Technology | 7.41</p>
       </div>
-      <br>
+    </div>
+    <br>
 
-      <div class="education-item">
-        <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <div class="education-details">
-          <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
-          <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
-        </div>
+    <div class="education-item">
+      <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
+        <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
       </div>
     </div>
 
