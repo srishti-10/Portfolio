@@ -286,148 +286,25 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   }
 }
 
-/* Mobile Responsive Styles */
-@media only screen and (max-width: 600px) {
-  /* Navigation */
-  .w3-top.w3-hide-large.w3-hide-medium {
-    display: none;
-  }
-  
-  .w3-bar.w3-black.w3-card {
-    display: none;
-  }
-  
-  #myNavbar {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  #myNavbar .w3-bar {
-    background: #222;
-  }
-  
-  #myNavbar .w3-bar-item {
-    width: 100% !important;
-    text-align: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #444;
-  }
-  
-  #myNavbar .w3-bar-item:last-child {
-    border-bottom: none;
-  }
-  
-  /* Main Content */
-  #main {
-    margin-top: 120px;
-    padding: 16px;
-  }
-
-  /* Header */
-  .w3-jumbo {
-    font-size: 48px !important;
-  }
-
-  /* Skills Section */
-  .w3-quarter {
-    width: 100% !important;
-    margin-bottom: 20px !important;
-  }
-
-  .w3-row.w3-center.w3-padding-16.w3-section.w3-light-grey {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px !important;
-  }
-
-  .w3-quarter.w3-section {
-    padding: 15px 0 !important;
-  }
-
-  /* Experience and Education */
-  .education-item, .experience-item {
-    margin-bottom: 2em !important;
-  }
-
-  .w3-circle {
-    margin-bottom: 15px !important;
-    width: 60px !important;
-  }
-
-  .education-details {
-    width: 100% !important;
-    max-width: 90% !important;
-  }
-
-  .w3-large {
-    font-size: 1.2em !important;
-  }
-
-  .major-text {
-    font-size: 0.9em !important;
-  }
-
-  /* Contact Button */
-  .w3-button {
-    width: 100% !important;
-    margin: 10px 0 !important;
-  }
-
-  /* Footer */
-  .w3-content {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 16px !important;
-  }
-
-  .w3-padding-64 {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
-  }
-  /* Experience Section */
-  .experience-item {
-    margin-bottom: 2em;
-  }
-
-  .experience-item .w3-circle {
-    margin-bottom: 15px !important;
-    width: 60px !important;
-  }
-
-  .experience-item .education-details {
-    width: 100% !important;
-    max-width: 90% !important;
-  }
-
-  .experience-item .w3-large {
-    font-size: 1.2em !important;
-  }
-
-  .date-text {
-    font-size: 0.9em !important;
-    margin: 0.5em 0 !important;
-    text-align: center !important;
-  }
-}
-
 /* Mobile Navigation */
 @media only screen and (max-width: 600px) {
-  /* Mobile menu styles */
-  .w3-bar .w3-button {
-    padding: 12px 16px;
-    text-align: center;
-    width: 100% !important;
+  /* Hide desktop menu items on mobile */
+  .w3-hide-small {
+    display: none !important;
   }
 
-  .w3-bar .w3-button i {
+  /* Mobile menu styles */
+  .w3-bar.w3-black.w3-card .w3-button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .w3-bar.w3-black.w3-card .w3-button i {
     margin-right: 8px;
   }
 
-  .w3-bar .w3-right {
+  /* Mobile menu button */
+  .w3-bar.w3-black.w3-card .w3-right {
     position: absolute;
     right: 0;
     top: 0;
@@ -451,6 +328,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     background: #222;
     color: #fff;
     padding: 16px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
 
   #mobileMenuContent .w3-bar-item {
@@ -480,17 +362,71 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     border: none;
   }
 
-  /* Hide desktop menu items on mobile */
-  .w3-hide-small {
-    display: none !important;
-  }
-
   /* Main content margin for mobile menu */
   #main {
     margin-top: 60px;
   }
+
+  /* Experience Section */
+  .experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .experience-item .w3-circle {
+    margin-bottom: 15px !important;
+    width: 60px !important;
+  }
+
+  .experience-item .education-details {
+    width: 100% !important;
+    max-width: 90% !important;
+  }
+
+  .experience-item .w3-large {
+    font-size: 1.2em !important;
+  }
+
+  .date-text {
+    font-size: 0.9em !important;
+    margin: 0.5em 0 !important;
+    text-align: center !important;
+  }
+
+  /* Education Section */
+  .education-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .education-item .w3-circle {
+    margin-bottom: 15px !important;
+    width: 60px !important;
+  }
+
+  .education-item .education-details {
+    width: 100% !important;
+    max-width: 90% !important;
+  }
+
+  .education-item .w3-large {
+    font-size: 1.2em !important;
+  }
+
+  .major-text {
+    font-size: 0.9em !important;
+    margin: 0.5em 0 !important;
+    text-align: center !important;
+  }
 }
 </style>
+
 <body class="w3-black">
 
 <!-- Navbar -->
@@ -499,6 +435,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <a href="index.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-home"></i> HOME</a>
     <a href="projects.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-th"></i> PROJECTS</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-envelope"></i> CONTACT</a>
+
+    <!-- Desktop menu items -->
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
 
     <!-- Mobile menu button -->
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -511,55 +452,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div id="mobileMenu" class="w3-overlay w3-hide-large w3-hide-medium" onclick="w3_close()" style="display:none"></div>
 
 <!-- Mobile Menu Content -->
-<div id="mobileMenuContent" class="w3-bar-block w3-card-4 w3-hide-large w3-hide-medium" style="display:none; position: fixed; top: 60px; left: 0; right: 0; z-index: 1000">
+<div id="mobileMenuContent" class="w3-bar-block w3-card-4 w3-hide-large w3-hide-medium" style="display:none">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-right">&times;</a>
   <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-home w3-margin-right"></i>HOME</a>
   <a href="projects.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-th w3-margin-right"></i>PROJECTS</a>
   <a href="contact.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-envelope w3-margin-right"></i>CONTACT</a>
 </div>
-
-<script>
-// Scroll reveal animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      
-      // Animate skill bars if they're in the skills section
-      if (entry.target.classList.contains('skill-bar')) {
-        entry.target.style.width = entry.target.dataset.width;
-      }
-    }
-  });
-});
-
-// Add hidden class to elements we want to animate
-document.querySelectorAll('.w3-content, .w3-padding-64, .skill-bar').forEach((el) => {
-  el.classList.add('hidden');
-  observer.observe(el);
-});
-
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Open and close mobile menu
-function w3_open() {
-  document.getElementById("mobileMenu").style.display = "block";
-  document.getElementById("mobileMenuContent").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mobileMenu").style.display = "none";
-  document.getElementById("mobileMenuContent").style.display = "none";
-}
-</script>
   <br>
   
   <!-- Page Content -->
@@ -617,53 +515,56 @@ function w3_close() {
 
     <!-- Experience Section -->
     <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
-    <div class="experience-item w3-center">
-      <img src="Samsung-Logo.png" alt="Samsung" class="w3-circle w3-margin-bottom" style="width:60px">
+    <div class="experience-item">
+      <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</p>
-        <p>ENGINEER</p>
+        <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
         <p class="date-text">JULY'22 – MAY'23</p>
       </div>
     </div>
-    <div class="experience-item w3-center w3-margin-top">
-      <img src="th.jpeg" alt="Publicis" class="w3-circle w3-margin-bottom" style="width:60px">
+    <br>
+
+    <div class="experience-item">
+      <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">PUBLICIS SAPIENT, BANGLORE</p>
-        <p>JAVA DEVELOPER</p>
+        <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
         <p class="date-text">FEB'22 – JULY'22</p>
       </div>
     </div>
-    <div class="experience-item w3-center w3-margin-top">
-      <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-circle w3-margin-bottom" style="width:60px">
+    <br>
+
+    <div class="experience-item">
+      <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">RETAIL RUSH by GMC, ANDRAPRADESH</p>
-        <p>WEB DEVELOPER</p>
+        <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
         <p class="date-text">FEB'21 – APRIL'21</p>
       </div>
     </div>
+
     <!-- Education Section -->
     <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
-    <div class="education-item w3-center">
-      <img src="logo_Epita.png" alt="EPITA" class="w3-circle w3-margin-bottom" style="width:60px">
+    <div class="education-item">
+      <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">EPITA, PARIS</p>
-        <p>MASTERS</p>
+        <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
         <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
       </div>
     </div>
-    <div class="education-item w3-center w3-margin-top">
-      <img src="bitlogo.png" alt="BIT" class="w3-circle w3-margin-bottom" style="width:60px">
+    <br>
+
+    <div class="education-item">
+      <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</p>
-        <p>B.TECH</p>
+        <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
         <p class="major-text">Major: Information Technology | 7.41</p>
       </div>
     </div>
-    <div class="education-item w3-center w3-margin-top">
-      <img src="dps.png" alt="DPS" class="w3-circle w3-margin-bottom" style="width:60px">
+    <br>
+
+    <div class="education-item">
+      <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
       <div class="education-details">
-        <p class="w3-large">DELHI PRIVATE SCHOOL, SHARJAH</p>
-        <p>AISSCE- 12TH</p>
+        <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
         <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
       </div>
     </div>
