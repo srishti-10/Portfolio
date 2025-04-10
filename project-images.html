@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Images</title>
+    <style>
+        body {
+            background: #0a0a0a;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .project-image {
+            width: 800px;
+            height: 450px;
+            margin: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .image-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: linear-gradient(145deg, #2c3e50, #3498db);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .family-hub { background: linear-gradient(145deg, #27ae60, #2ecc71); }
+        .query-system { background: linear-gradient(145deg, #8e44ad, #9b59b6); }
+        .gesture-control { background: linear-gradient(145deg, #c0392b, #e74c3c); }
+        .cry-cure { background: linear-gradient(145deg, #f39c12, #f1c40f); }
+        .audiobook { background: linear-gradient(145deg, #2980b9, #3498db); }
+        
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 32px;
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
+        .tech-list {
+            font-size: 18px;
+            opacity: 0.9;
+            text-align: center;
+        }
+        .features {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-image" id="family-hub">
+        <div class="image-content family-hub">
+            <h2>Family Hub</h2>
+            <div class="tech-list">Smart Kitchen Assistant with AI</div>
+            <div class="features">
+                <div class="feature">Inception V3</div>
+                <div class="feature">YOLOv5</div>
+                <div class="feature">Real-time Detection</div>
+                <div class="feature">Food Recognition</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-image" id="query-system">
+        <div class="image-content query-system">
+            <h2>Query Segregation System</h2>
+            <div class="tech-list">Smart Customer Support Router</div>
+            <div class="features">
+                <div class="feature">NLP</div>
+                <div class="feature">Contextual Bandits</div>
+                <div class="feature">Intent Detection</div>
+                <div class="feature">Dynamic Routing</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-image" id="gesture-control">
+        <div class="image-content gesture-control">
+            <h2>Touch-free TV Control</h2>
+            <div class="tech-list">Gesture Recognition System</div>
+            <div class="features">
+                <div class="feature">MediaPipe</div>
+                <div class="feature">CNN-LSTM</div>
+                <div class="feature">Real-time Tracking</div>
+                <div class="feature">Hand Gestures</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-image" id="cry-cure">
+        <div class="image-content cry-cure">
+            <h2>CryCure</h2>
+            <div class="tech-list">Neonatal Care AI</div>
+            <div class="features">
+                <div class="feature">Audio Processing</div>
+                <div class="feature">Machine Learning</div>
+                <div class="feature">Mobile App</div>
+                <div class="feature">Real-time Analysis</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-image" id="audiobook">
+        <div class="image-content audiobook">
+            <h2>AudioBook Reader</h2>
+            <div class="tech-list">Text-to-Speech Application</div>
+            <div class="features">
+                <div class="feature">Multiple Voices</div>
+                <div class="feature">Speed Control</div>
+                <div class="feature">Format Support</div>
+                <div class="feature">User Settings</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<title>Srishti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="icon" type="image/png" href="icon.jpg"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+<style>
+html {
+  scroll-behavior: smooth;
+}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+.date-text {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.major-text {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.education-item {
+  margin-bottom: 30px;
+}
+.w3-large {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Typing Animation */
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff }
+}
+
+/* Skill Bars Animation */
+.skill-bar {
+  width: 0;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--final-width, 100%); }
+}
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+.w3-large {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+.education-details {
+  flex: 1;
+}
+.education-details p {
+  margin: 0.5em 0;
+}
+.major-text {
+  margin-left: 95px !important;
+  color: #888;
+}
+/* Project Containers */
+.project-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-container h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.project-container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project-container img:hover {
+  transform: scale(1.02);
+}
+
+.project-container p {
+  color: #ddd;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.skill-bar {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.typing-text {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff; }
+}
+</style>
+<body class="w3-black">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+  <br>
+  
+  <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Srishti</h1>
+    <p>ML and AI Developer</p>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+      Aspiring machine learning engineer with experience in developing and deploying classification 
+      and detection models optimized for on-device usage. Passionate about leveraging data-driven 
+      approaches to solve complex business and social challenges. Proficient in machine learning, 
+      deep learning, and computer vision, with expertise in Python, C, and C++. 
+      Skilled in model training, optimization, and integration, with additional 
+      knowledge of SQL, jQuery, and PHP. Adept at exploring innovative solutions and 
+      driving impactful results in AI and ML applications.
+    </p>
+    
+    <!-- Skills Section -->
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">AI/ML</span><br>
+        Deep Learning, NLP, Computer Vision
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Web Dev</span><br>
+        Full Stack
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Python</span><br>
+        NumPy, Pandas, TensorFlow
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Java</span><br>
+        Spring Boot, Hibernate, JUnit
+      </div>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="w3-padding-16">
+      <a href="https://drive.google.com/file/d/1FUEpmeS59dwgVLO2zuysu-2RrnxlB785/view?usp=share_link" class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-download"></i> Download Resume
+      </a>
+      <a href="projects.html" class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-eye"></i> View My Projects
+      </a>
+    </div>
+
+    <!-- Experience Section -->
+    <h3 class="w3-padding-24 w3-text-light-grey">Experience</h3>  
+    <img src="Samsung-Logo.png" alt="Samsung" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">SAMSUNG RESEARCH AND DEVELOPMENT, DELHI</span> ENGINEER</p>
+    <p class="date-text">JULY'22 – MAY'23</p><br>
+    
+    <img src="th.jpeg" alt="Publicis" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">PUBLICIS SAPIENT, BANGLORE</span> JAVA DEVELOPER</p>
+    <p class="date-text">FEB'22 – JULY'22</p><br>
+
+    <img src="RETAIL_RUSH.png" alt="Retail Rush" class="w3-left w3-rectangle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">RETAIL RUSH by GMC, ANDRAPRADESH</span> WEB DEVELOPER</p>
+    <p class="date-text">FEB'21 – APRIL'21</p><br>
+
+    <!-- Education Section -->
+    <h3 class="w3-padding-24 w3-text-light-grey">Education</h3>  
+    <div class="education-item">
+      <img src="logo_Epita.png" alt="EPITA" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">EPITA, PARIS</span> MASTERS</p>
+        <p class="major-text">Major: ARTIFICIAL INTELLIGENCE SYSTEMS | Ongoing</p>
+      </div>
+    </div>
+    <br>
+
+    <div class="education-item">
+      <img src="bitlogo.png" alt="BIT" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">BIRLA INSTITUTE OF TECHNOLOGY, RANCHI, JHARKHAND</span> B.TECH</p>
+        <p class="major-text">Major: Information Technology | 7.41</p>
+      </div>
+    </div>
+    <br>
+
+    <div class="education-item">
+      <img src="dps.png" alt="DPS" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <div class="education-details">
+        <p><span class="w3-large w3-margin-right">DELHI PRIVATE SCHOOL, SHARJAH</span> AISSCE- 12TH</p>
+        <p class="major-text">Major: Physics, Chemistry, Mathematics | 85.2% | May 2018</p>
+      </div>
+    </div>
+  </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+    <!-- Contact Button -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <p class="w3-padding-16">
+      <a href="contact.html" class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-envelope"></i> Contact Me
+      </a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i><a href="https://www.facebook.com/srishti.binwani.1/" class="fa fa-facebook-official w3-hover-opacity"></a></i>
+    <i><a href="https://www.instagram.com/__srishti10__/" class="fa fa-instagram w3-hover-opacity"></a></i>
+    <i><a href="https://github.com/srishti-10" class="fa fa-github w3-hover-opacity"></a></i>
+    <i><a href="https://www.linkedin.com/in/srishti-b-345374140/" class="fa fa-linkedin w3-hover-opacity"></a></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      
+      // Animate skill bars if they're in the skills section
+      if (entry.target.classList.contains('skill-bar')) {
+        entry.target.style.width = entry.target.dataset.width;
+      }
+    }
+  });
+});
+
+// Add hidden class to elements we want to animate
+document.querySelectorAll('.w3-content, .w3-padding-64, .skill-bar').forEach((el) => {
+  el.classList.add('hidden');
+  observer.observe(el);
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+</body>
+</html>
