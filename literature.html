@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<title>Srishti Binwani - Literature</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="icon" type="image/png" href="icon.jpg"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+/* Literature Card Styles */
+.literature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.literature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.literature-card h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+.literature-card h4 {
+  color: #ddd;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.literature-card p {
+  color: #ccc;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.literature-card .w3-tag {
+  background: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.literature-card .w3-tag:hover {
+  background: #ddd;
+  transform: translateY(-2px);
+}
+
+.literature-card .w3-tag.published {
+  background: #4CAF50;
+  color: white;
+}
+
+.literature-card .w3-tag.collaborative {
+  background: #2196F3;
+  color: white;
+}
+
+.literature-card .w3-tag.research {
+  background: #FF9800;
+  color: white;
+}
+
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .w3-jumbo {
+    font-size: 48px !important;
+  }
+
+  .literature-card {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .literature-card h3 {
+    font-size: 1.3em;
+  }
+
+  .literature-card h4 {
+    font-size: 1.1em;
+  }
+
+  .w3-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 16px;
+  }
+
+  .w3-padding-64 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+}
+
+/* Navigation */
+.w3-bar.w3-black.w3-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.w3-bar.w3-black.w3-card .w3-button {
+  width: auto;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0 4px;
+  white-space: nowrap;
+}
+
+.w3-bar.w3-black.w3-card .w3-button i {
+  margin-right: 4px;
+}
+
+/* Mobile Navigation */
+@media only screen and (max-width: 600px) {
+  .w3-bar.w3-black.w3-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .w3-bar.w3-black.w3-card .w3-button {
+    width: auto !important;
+    text-align: center !important;
+    padding: 8px 16px !important;
+    margin: 0 4px !important;
+  }
+
+  .w3-bar.w3-black.w3-card .w3-button i {
+    margin-right: 4px;
+  }
+
+  .w3-bar.w3-black.w3-card .w3-right {
+    position: static;
+    padding: 8px 12px;
+    margin-left: auto;
+  }
+
+  .w3-overlay {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  #mobileMenuContent {
+    background: #222;
+    color: #fff;
+    padding: 16px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  #mobileMenuContent .w3-bar-item {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #444;
+  }
+
+  #mobileMenuContent .w3-bar-item:hover {
+    background: #444;
+  }
+
+  #mobileMenuContent .w3-button {
+    width: 100% !important;
+    text-align: left;
+  }
+
+  #mobileMenuContent .w3-button i {
+    margin-right: 10px;
+  }
+
+  #mobileMenuContent .w3-button.w3-right {
+    text-align: right;
+    padding: 12px 16px;
+    border: none;
+  }
+
+  #main {
+    margin-top: 60px;
+  }
+}
+</style>
+
+<body class="w3-black">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <!-- Desktop menu items -->
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="literature.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> LITERATURE</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+
+    <!-- Mobile menu items -->
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-home"></i> HOME</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="literature.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-book"></i> LITERATURE</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenu" class="w3-overlay w3-hide-large w3-hide-medium" onclick="w3_close()" style="display:none"></div>
+
+<!-- Mobile Menu Content -->
+<div id="mobileMenuContent" class="w3-bar-block w3-card-4 w3-hide-large w3-hide-medium" style="display:none">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-right">&times;</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-home w3-margin-right"></i>HOME</a>
+  <a href="projects.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-th w3-margin-right"></i>PROJECTS</a>
+  <a href="literature.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-book w3-margin-right"></i>LITERATURE</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-envelope w3-margin-right"></i>CONTACT</a>
+</div>
+<br>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Research</span> Literature</h1>
+    <p>Published Papers & Current Reading</p>
+  </header>
+
+  <!-- Literature Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="literature">
+    <!-- Published Papers Section -->
+    <h2 class="w3-text-light-grey">Published Papers</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <div class="literature-card">
+      <h3>Feeling Machines: Ethics, Culture, and the Rise of Emotional AI</h3>
+      <h4>Sorbonne Center for Artificial Intelligence</h4>
+      <p><strong>Authors:</strong> Vivek Chavan, Arsen Cenaj, Shuyuan Shen, Ariane Bar, Srishti Binwani, Tommaso Del Becaro, Marius Funk, Lynn Greschner, Roberto Hung, Stina Klein, Romina Kleiner, Stefanie Krause, Sylwia Olbrych, Vishvapalsinhji Parmar, Jaleh Sarafraz, Daria Soroko, Daksitha Withanage Don, Chang Zhou, Hoang Thuy Duong Vu, Parastoo Semnani, Daniel Weinhardt, Elisabeth Andre, Jörg Krüger, Xavier Fresquet</p>
+      <p><strong>Institution:</strong> Sorbonne University, Paris, France</p>
+      <p><strong>Publication Date:</strong> June 14, 2025</p>
+      <p><strong>Abstract:</strong> This paper explores the growing presence of emotionally responsive artificial intelligence through a critical and interdisciplinary lens. Bringing together the voices of early-career researchers from multiple fields, it explores how AI systems that simulate or interpret human emotions are reshaping our interactions in areas such as education, healthcare, mental health, caregiving, and digital life.</p>
+      <p><strong>Key Themes:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>Ethical implications of emotional AI</li>
+        <li>Cultural dynamics of human-machine interaction</li>
+        <li>Risks and opportunities for vulnerable populations</li>
+        <li>Emerging regulatory, design, and technical considerations</li>
+      </ul>
+      <p><strong>Subjects:</strong> Human-Computer Interaction (cs.HC); Artificial Intelligence (cs.AI); Computers and Society (cs.CY)</p>
+      <div class="w3-tag published">Published</div>
+      <div class="w3-tag collaborative">Collaborative Research</div>
+      <div class="w3-tag research">AI Ethics</div>
+      <a href="https://arxiv.org/abs/2506.12437" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+
+    <!-- Current Read Section -->
+    <h2 class="w3-text-light-grey" style="margin-top: 80px;">Current Read</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <div class="literature-card">
+      <h3>Neural Networks and Deep Learning</h3>
+      <h4>Michael Nielsen</h4>
+      <p><strong>Type:</strong> Online Book</p>
+      <p><strong>Abstract:</strong> A comprehensive introduction to neural networks and deep learning. The book covers the fundamentals of neural networks, backpropagation, and deep learning techniques. It provides both theoretical foundations and practical implementations.</p>
+      <p><strong>Key Topics:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>Neural network fundamentals</li>
+        <li>Backpropagation algorithm</li>
+        <li>Deep learning architectures</li>
+        <li>Practical implementation</li>
+      </ul>
+      <div class="w3-tag" style="background: #FF9800; color: white;">Current Read</div>
+      <div class="w3-tag" style="background: #2196F3; color: white;">Deep Learning</div>
+      <a href="https://arxiv.org/pdf/2409.00720" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+
+    <div class="literature-card">
+      <h3>Generative Adversarial Networks</h3>
+      <h4>Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio</h4>
+      <p><strong>Type:</strong> Research Paper</p>
+      <p><strong>Abstract:</strong> This paper introduces Generative Adversarial Networks (GANs), a new framework for estimating generative models via an adversarial process. The framework consists of two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G.</p>
+      <p><strong>Key Contributions:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>Introduction of GAN framework</li>
+        <li>Adversarial training methodology</li>
+        <li>Generative model architecture</li>
+        <li>Discriminative model design</li>
+      </ul>
+      <div class="w3-tag" style="background: #FF9800; color: white;">Current Read</div>
+      <div class="w3-tag" style="background: #2196F3; color: white;">GANs</div>
+      <a href="https://arxiv.org/pdf/1412.1897" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+
+    <div class="literature-card">
+      <h3>PaLM: Scaling Language Modeling with Pathways</h3>
+      <h4>Chowdhery et al.</h4>
+      <p><strong>Type:</strong> Research Paper</p>
+      <p><strong>Abstract:</strong> This paper presents PaLM (Pathways Language Model), a 540-billion parameter, densely activated, Transformer language model. PaLM achieves state-of-the-art few-shot performance across most tasks, and in many cases by large margins.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>540B parameter model</li>
+        <li>Pathways architecture</li>
+        <li>Few-shot learning capabilities</li>
+        <li>State-of-the-art performance</li>
+      </ul>
+      <div class="w3-tag" style="background: #FF9800; color: white;">Current Read</div>
+      <div class="w3-tag" style="background: #2196F3; color: white;">Language Models</div>
+      <a href="https://arxiv.org/pdf/2205.09310" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+
+    <div class="literature-card">
+      <h3>Wide & Deep Learning for Recommender Systems</h3>
+      <h4>Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra, Hrishi Aradhye, Glen Anderson, Greg Corrado, Wei Chai, Mustafa Ispir, Rohan Anil, Zakaria Haque, Lichan Hong, Vihan Jain, Xiaobing Liu, Hemal Shah</h4>
+      <p><strong>Type:</strong> Research Paper</p>
+      <p><strong>Abstract:</strong> This paper presents Wide & Deep learning, a model architecture that combines the benefits of memorization and generalization for recommender systems. The model jointly trains wide linear models and deep neural networks to combine the strengths of both approaches.</p>
+      <p><strong>Key Contributions:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>Wide & Deep architecture</li>
+        <li>Memorization and generalization</li>
+        <li>Recommender systems</li>
+        <li>Joint training methodology</li>
+      </ul>
+      <div class="w3-tag" style="background: #FF9800; color: white;">Current Read</div>
+      <div class="w3-tag" style="background: #2196F3; color: white;">Recommender Systems</div>
+      <a href="https://arxiv.org/pdf/1610.02136" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+
+    <div class="literature-card">
+      <h3>Federated Learning: Strategies for Improving Communication Efficiency</h3>
+      <h4>Jakub Konečný, H. Brendan McMahan, Felix X. Yu, Peter Richtárik, Ananda Theertha Suresh, Dave Bacon</h4>
+      <p><strong>Type:</strong> Research Paper</p>
+      <p><strong>Abstract:</strong> This paper presents several strategies for reducing the communication cost of federated learning. The authors propose structured and sketched updates that provide theoretical guarantees and demonstrate empirical improvements in communication efficiency.</p>
+      <p><strong>Key Contributions:</strong></p>
+      <ul style="color: #ccc; margin-left: 20px;">
+        <li>Federated learning optimization</li>
+        <li>Communication efficiency</li>
+        <li>Structured updates</li>
+        <li>Sketching techniques</li>
+      </ul>
+      <div class="w3-tag" style="background: #FF9800; color: white;">Current Read</div>
+      <div class="w3-tag" style="background: #2196F3; color: white;">Federated Learning</div>
+      <a href="https://arxiv.org/pdf/1706.02690" target="_blank" class="w3-tag" style="background: #9C27B0; color: white; text-decoration: none;">
+        <i class="fa fa-external-link"></i> View Paper
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <p class="w3-padding-16">
+      <a href="contact.html" class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-envelope"></i> Contact Me
+      </a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i><a href="https://www.facebook.com/srishti.binwani.1/" class="fa fa-facebook-official w3-hover-opacity"></a></i>
+    <i><a href="https://www.instagram.com/__srishti10__/" class="fa fa-instagram w3-hover-opacity"></a></i>
+    <i><a href="https://github.com/srishti-10" class="fa fa-github w3-hover-opacity"></a></i>
+    <i><a href="https://www.linkedin.com/in/srishti-b-345374140/" class="fa fa-linkedin w3-hover-opacity"></a></i>
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html> 
